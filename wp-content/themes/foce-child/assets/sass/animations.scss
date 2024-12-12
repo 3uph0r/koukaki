@@ -1,0 +1,33 @@
+// Animation transition fadeIn
+@keyframes fadeIn {
+    from {
+        opacity: 0; // Masquer initialement
+    }
+    to {
+        opacity: 1; // Visible à la fin
+    }
+}
+
+// Décalage vers le bas
+@keyframes downToLoad {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Décalage vers le haut
+@keyframes upToLoad {
+    from {
+        opacity: 0;
+        transform: translateY(200px); /* Décalage initial vers le bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Position finale */
+    }
+}

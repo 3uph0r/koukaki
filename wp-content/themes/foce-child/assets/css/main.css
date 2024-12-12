@@ -1,43 +1,45 @@
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .hero-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    .hero-fallback {
-        display: none;
-    }
-
-    .hero-title {
-        font-size: 4rem;
-        color: white;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        animation: float 3s ease-in-out infinite;
-    }
+@charset "UTF-8";
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes downToLoad {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes upToLoad {
+  from {
+    opacity: 0;
+    transform: translateY(200px); /* Décalage initial vers le bas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Position finale */
+  }
+}
+section {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
 
-// Animation de flottement
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+section.banner {
+  transform: translateY(-100px);
+  animation: downToLoad 1s ease-out forwards;
 }
+
+section.banner img {
+  transform: translateY(200px);
+  animation: upToLoad 1s ease-out forwards;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,14 @@
+section {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; // Animation Transition fade-in 
+}
+
+section.banner {
+    transform: translateY(-100px); // Position initiale vers le haut
+    animation: downToLoad 1s ease-out forwards; // Animation pour descendre
+}
+
+section.banner img {
+    transform: translateY(200px); // Position initiale vers le bas
+    animation: upToLoad 1s ease-out forwards; // Animation pour monter
+}

@@ -3,15 +3,6 @@
 get_header();
 ?>
 
-<div class="hero">
-    <video class="hero-video" autoplay loop muted playsinline>
-        <source src="<?php echo get_stylesheet_directory_uri(); ?>./assets/video/hero-video.mp4" type="video/mp4">
-        <img class="hero-fallback" src="<?php echo get_stylesheet_directory_uri(); ?>./assets/images/hero-fallback.jpg" alt="Hero Background">
-    </video>
-    <h1 class="hero-title">Fleurs d’oranger & Chats errants</h1>
-</div>
-
-
 <main id="primary" class="site-main">
     <section class="banner">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
