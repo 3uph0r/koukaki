@@ -41,11 +41,20 @@
 }
 
 // Effet de rotation pour la fleur
-@keyframes rotate {
+@keyframes rotateRight {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateLeft {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
     }
 }
