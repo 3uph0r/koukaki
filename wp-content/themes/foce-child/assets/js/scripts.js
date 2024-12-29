@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function onScroll() {
   const scrollY = window.scrollY;
   const maxScroll = 300;
-  const initialOffset = 60; // position de départ plus à droite
+  const initialOffset = 50;
   const bigCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
   const littleCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
   document.querySelector(

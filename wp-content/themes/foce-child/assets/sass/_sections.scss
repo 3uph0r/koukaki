@@ -17,6 +17,11 @@ section {
     }
 }
 
+// Animation de flottement
+.banner img {
+    animation: float 6s ease-in-out infinite !important;
+}
+
 // Animation pour faire tourner les fleurs
 .story__article::after {
     content: '';

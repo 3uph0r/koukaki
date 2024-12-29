@@ -49,7 +49,7 @@ get_header();
                 ?>
             </div>
         </article>
-        
+
         <article id="place">
             <div>
                 <h3>Le Lieu</h3>
@@ -59,7 +59,6 @@ get_header();
             <div class="big-cloud"></div>
         </article>
     </section>
-
 
     <section id="studio">
         <!-- Ajout de la classe "displayTitle pour animation des H2 -->
@@ -71,7 +70,6 @@ get_header();
     </section>
 
     <?php get_template_part('content', 'nomination'); ?>
-
 
 </main><!-- #main -->
 
