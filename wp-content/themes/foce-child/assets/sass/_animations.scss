@@ -62,33 +62,18 @@
     }
 }
 
-// Animation pour faire flotter l'image
+// Animation pour faire flotter le logo
 @keyframes float {
-    0% {
-        transform: translate3d(6px,6px,0);
+    0%, 100% {
+        transform: translate(0, 0);
     }
-    12% {
-        transform: translate3d(0px,6px,0);
+    25% {
+        transform: translate(11px, 8px);
     }
-    24% {
-        transform: translate3d(6px,-4px,0);
+    50% {
+        transform: translate(6px, 11px);
     }
-    36% {
-        transform: translate3d(6px,0px,0);
-    }
-    48% {
-        transform: translate3d(-4px,-6px,0);
-    }
-    60% {
-        transform: translate3d(0px,-4px,0);
-    }
-    72% {
-        transform: translate3d(-8px,6px,0);
-    }
-    84% {
-        transform: translate3d(-4px,0px,0);
-    }
-    100% {
-        transform: translate3d(6px,6px,0); 
+    75% {
+        transform: translate(-11px, 8px);
     }
 }

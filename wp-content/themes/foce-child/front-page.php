@@ -5,8 +5,15 @@ get_header();
 
 <main id="primary" class="site-main">
     <section class="banner">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <video class="banner__video" width="1440" autoplay="autoplay" muted=""
+                loop="infinite">
+                <source src="<?php echo get_theme_file_uri() . '/assets/video/hero-video.mp4'; ?>" type="video/mp4">
+            </video>
+        <div class="container__logo">
+            <img class="banner__logo" src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="Logo fleurs d'oranger & chats errants">
+        </div>
     </section>
+
     <section id="story" class="story">
         <!-- Ajout de la classe "displayTitle pour animation des H2 -->
         <h2><span class="displayTitle">L'histoire</span></h2>

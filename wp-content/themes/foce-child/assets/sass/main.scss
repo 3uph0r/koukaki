@@ -1,4 +1,4 @@
 // Importer les fichiers SCSS
-@use '_animations';   // Animations globales
-@use '_sections';     // Styles des sections
-@use '_titles';       // Styles des titres
+@use '_animations.scss';   // Animations globales
+@use '_sections.scss';     // Styles des sections
+@use '_titles.scss';       // Styles des titres
