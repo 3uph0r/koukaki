@@ -33,7 +33,7 @@ get_header();
         ?>
         <article id="characters">
             <div class="main-character">
-                <h3>Les personnages</h3>
+                <h3><span class="displayTitle">Les personnages</span></h3>
                 <?php
                 $main_character = $characters_query->posts[0];
                 echo '<figure>';
@@ -60,7 +60,7 @@ get_header();
 
         <article id="place">
             <div>
-                <h3>Le Lieu</h3>
+                <h3><span class="displayTitle">Le Lieu</span></h3>
                 <p><?php echo get_theme_mod('place'); ?></p>
             </div>
             <div class="little-cloud"></div>

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".displayTitle");
   const bigCloud = document.querySelector(".big-cloud");
   const littleCloud = document.querySelector(".little-cloud");
-  const logoContainer = document.querySelector(".container__logo");
+  const logo= document.querySelector(".banner__logo");
 
   const onScroll = () => {
     // Déplacement des titres au scroll
@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isVisible) {
         title.classList.add("is-visible");
+      } else {
+        title.classList.remove("is-visible"); // Retire la classe si le titre n'est plus visible
       }
-      console.log('Scrolling...');
     });
 
     // Déplacement des nuages
@@ -27,8 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     littleCloud.style.transform = `translateX(${littleCloudMove}px)`;
 
     // Ajustement pour l'effet de parallaxe du logo
-    logoContainer.style.transform = `translate(-50%, ${-50 + scrollY * 0.5}%)`;
+    if (logo) {
+      logo.style.transform = 'translateY(' + scrollY * 0.3 + 'px)';
+    }
   };
+  
 
   window.addEventListener("scroll", onScroll);
   onScroll(); // Vérifie une première fois au chargement.
