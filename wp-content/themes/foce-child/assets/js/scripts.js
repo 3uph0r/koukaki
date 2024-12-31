@@ -1,8 +1,11 @@
-// Animation des titres au scroll
 document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".displayTitle");
+  const bigCloud = document.querySelector(".big-cloud");
+  const littleCloud = document.querySelector(".little-cloud");
+  const logoContainer = document.querySelector(".container__logo");
 
   const onScroll = () => {
+    // Déplacement des titres au scroll
     titles.forEach((title) => {
       const rect = title.getBoundingClientRect();
       const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
@@ -10,26 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isVisible) {
         title.classList.add("is-visible");
       }
+      console.log('Scrolling...');
     });
+
+    // Déplacement des nuages
+    const scrollY = window.scrollY;
+    const maxScroll = 300;
+    const initialOffset = 50;
+    const bigCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
+    const littleCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
+
+    bigCloud.style.transform = `translateX(${bigCloudMove}px)`;
+    littleCloud.style.transform = `translateX(${littleCloudMove}px)`;
+
+    // Ajustement pour l'effet de parallaxe du logo
+    logoContainer.style.transform = `translate(-50%, ${-50 + scrollY * 0.5}%)`;
   };
 
   window.addEventListener("scroll", onScroll);
   onScroll(); // Vérifie une première fois au chargement.
 });
-
-// Déplace les nuages en fonction du défilement
-function onScroll() {
-  const scrollY = window.scrollY;
-  const maxScroll = 300;
-  const initialOffset = 50;
-  const bigCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
-  const littleCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
-  document.querySelector(
-    ".big-cloud"
-  ).style.transform = `translateX(${bigCloudMove}px)`;
-  document.querySelector(
-    ".little-cloud"
-  ).style.transform = `translateX(${littleCloudMove}px)`;
-}
-
-window.addEventListener("scroll", onScroll);

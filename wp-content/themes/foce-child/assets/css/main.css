@@ -1,99 +1,149 @@
 @charset "UTF-8";
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @keyframes downToLoad {
   from {
     opacity: 0;
     transform: translateY(-100px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes upToLoad {
   from {
     opacity: 0;
     transform: translateY(300px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes noMove {
   from {
     transform: translateY(-300px);
   }
+
   to {
     transform: translateY(0px);
   }
 }
+
 @keyframes rotateRight {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotateLeft {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(-360deg);
   }
 }
+
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0);
   }
+
   25% {
     transform: translate(11px, 8px);
   }
+
   50% {
     transform: translate(6px, 11px);
   }
+
   75% {
     transform: translate(-11px, 8px);
   }
 }
+
 section {
-  opacity: 0;
   animation: fadeIn 1s ease-out forwards, upToLoad 1s ease-out forwards;
 }
+
 section p {
   animation: noMove 1s ease-out forwards;
 }
 
-.banner {
+.displayTitle {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 1s ease;
+}
+
+.displayTitle.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story {
   position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 1440px;
-  animation: downToLoad 1s ease-out forwards;
 }
-.banner .container__logo {
+
+.story #place {
+  background-image: url("../images/Studio_Koukaki-image_place.png");
+  /* Image de fond actuelle */
+  background-size: cover;
+  position: relative;
+}
+
+.story .big-cloud,
+.story .little-cloud {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: upToLoad 1s ease-out forwards;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  /* Transition fluide pour le déplacement des nuages */
 }
-.banner .container__logo .banner__logo {
-  animation: float 3s ease-in-out infinite;
+
+.story .big-cloud {
+  background-image: url("../images/big_cloud.png");
+  /* Image du grand nuage */
+  top: 10%;
+  left: 70%;
+  /* Position initiale ajustée */
+  width: 300px;
+  height: 250px;
+  filter: blur(11px);
 }
-.banner .banner__video {
-  animation: downToLoad 1s ease-out forwards;
+
+.story .little-cloud {
+  background-image: url("../images/little_cloud.png");
+  /* Image du petit nuage */
+  top: 40%;
+  left: 60%;
+  /* Position initiale ajustée */
+  width: 150px;
+  height: 75px;
+  filter: blur(11px);
 }
 
 .story__article::after {
@@ -121,37 +171,6 @@ section p {
   transform-origin: center;
 }
 
-.story {
-  position: relative;
-}
-.story #place {
-  background-image: url("../images/Studio_Koukaki-image_place.png"); /* Image de fond actuelle */
-  background-size: cover;
-  position: relative;
-}
-.story .big-cloud, .story .little-cloud {
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease; /* Transition fluide pour le déplacement des nuages */
-}
-.story .big-cloud {
-  background-image: url("../images/big_cloud.png"); /* Image du grand nuage */
-  top: 10%;
-  left: 70%; /* Position initiale ajustée */
-  width: 300px;
-  height: 250px;
-  filter: blur(11px);
-}
-.story .little-cloud {
-  background-image: url("../images/little_cloud.png"); /* Image du petit nuage */
-  top: 40%;
-  left: 60%; /* Position initiale ajustée */
-  width: 150px;
-  height: 75px;
-  filter: blur(11px);
-}
-
 #studio h2::before {
   background-image: url("../images/Random_Flower.png");
   overflow: hidden;
@@ -160,12 +179,39 @@ section p {
   animation: rotateRight 3s linear infinite;
   transform-origin: center;
 }
+
 #studio h2::after {
   background-image: url("../images/Flower.png");
   width: 100px;
   height: 100px;
   animation: rotateLeft 20s linear infinite;
   transform-origin: center;
+}
+
+#nomination h3::before {
+  content: "";
+  background-image: url("../images/Sunflower.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: -1em;
+  bottom: 8.5em;
+  width: 250px;
+  height: 250px;
+  animation: rotateLeft 2s linear infinite;
+}
+
+#nomination h3::after {
+  content: "";
+  background-image: url("../images/Orchid.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0.1em;
+  bottom: 10em;
+  width: 200px;
+  height: 200px;
+  animation: rotateRight 10s linear infinite;
 }
 
 #nomination {
@@ -177,6 +223,7 @@ section p {
   left: 6em;
   align-items: center;
 }
+
 #nomination h3 {
   background-image: url("../images/orange_characters_bg.png");
   display: inline-block;
@@ -192,30 +239,7 @@ section p {
   color: white;
   border-radius: 10px;
 }
-#nomination h3::before {
-  content: "";
-  background-image: url("../images/Sunflower.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  left: -1em;
-  bottom: 8.5em;
-  width: 250px;
-  height: 250px;
-  animation: rotateLeft 2s linear infinite;
-}
-#nomination h3::after {
-  content: "";
-  background-image: url("../images/Orchid.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  right: 0.1em;
-  bottom: 10em;
-  width: 200px; /* largeur à ajuster */
-  height: 200px; /* hauteur à ajuster */
-  animation: rotateRight 10s linear infinite;
-}
+
 #nomination img {
   margin-bottom: 6em;
   margin-left: -5em;
@@ -224,9 +248,11 @@ section p {
 #colophon::before {
   content: "";
 }
+
 #colophon::after {
   content: "";
 }
+
 #colophon ul::after {
   content: "";
   background-image: url("../images/Hibiscus footer.png");
@@ -241,15 +267,36 @@ footer {
   animation: upToLoad 1s ease-out forwards;
 }
 
-.displayTitle {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 1s ease;
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  animation: downToLoad 1s ease-out forwards;
 }
-.displayTitle.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+
+.banner .container__logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: upToLoad 1s ease-out forwards;
+}
+
+.banner .container__logo .banner__logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+.banner .container__logo.banner__video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: downToLoad 1s ease-out forwards;
 }
 
 /*# sourceMappingURL=main.css.map */

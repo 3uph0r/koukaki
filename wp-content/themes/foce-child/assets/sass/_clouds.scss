@@ -1,0 +1,35 @@
+// Animation nuages
+.story {
+    position: relative;
+
+    #place {
+        background-image: url('../images/Studio_Koukaki-image_place.png'); /* Image de fond actuelle */
+        background-size: cover;
+        position: relative;
+    }
+
+    .big-cloud, .little-cloud {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease; /* Transition fluide pour le déplacement des nuages */
+    }
+
+    .big-cloud {
+        background-image: url('../images/big_cloud.png'); /* Image du grand nuage */
+        top: 10%;
+        left: 70%; /* Position initiale ajustée */
+        width: 300px;
+        height: 250px;
+        filter: blur(11px);
+    }
+
+    .little-cloud {
+        background-image: url('../images/little_cloud.png'); /* Image du petit nuage */
+        top: 40%;
+        left: 60%; /* Position initiale ajustée */
+        width: 150px;
+        height: 75px;
+        filter: blur(11px);
+    }
+}

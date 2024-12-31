@@ -1,0 +1,33 @@
+   // Animation de descente pour la bannière en arrière-plan
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    animation: downToLoad 1s ease-out forwards;
+
+    .container__logo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: upToLoad 1s ease-out forwards;
+        // Animation de flottement pour le logo
+        .banner__logo {
+            animation: float 3s ease-in-out infinite;
+        }
+    
+    // Animation de descente pour la vidéo
+        &.banner__video {
+            position: fixed; // Fixe la vidéo pour l'effet de parallaxe
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Assure que la vidéo couvre la zone sans distorsion
+            animation: downToLoad 1s ease-out forwards;
+        }
+    }
+}

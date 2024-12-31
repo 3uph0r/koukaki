@@ -1,0 +1,76 @@
+// Animation pour faire tourner les fleurs
+.story__article::after {
+    content: '';
+    background-image: url('../images/Hibiscus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: rotateRight 15s linear infinite;
+    transform-origin: center;
+}
+
+.story {
+    h2 {
+        &::after {
+        content: '';
+        background-image: url('../images/Sunflower.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 200px; 
+        height: 200px;
+        left: 25px;
+        animation: rotateLeft 5s linear infinite;
+        transform-origin: center;
+        }
+    }
+}
+
+// Animation fleurs
+#studio {
+	h2 {
+        &::before {
+			background-image: url('../images/Random_Flower.png');
+            overflow: hidden;
+			width: 200px;
+			height: 200px;
+			animation: rotateRight 3s linear infinite;
+			transform-origin: center;
+		}
+		&::after {
+			background-image: url('../images/Flower.png');
+			width: 100px;
+			height: 100px;
+			animation: rotateLeft 20s linear infinite;
+			transform-origin: center;
+		}	
+	}
+}
+#nomination {
+    h3::before {
+        content: '';
+        background-image: url("../images/Sunflower.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: -1em;
+        bottom: 8.5em;
+        width: 250px;
+        height: 250px;
+        animation: rotateLeft 2s linear infinite;
+}
+    h3::after {
+        content: '';
+        background-image: url('../images/Orchid.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 0.1em;
+        bottom: 10em;
+        width: 200px;
+        height: 200px;
+        animation: rotateRight 10s linear infinite;
+    }
+} 

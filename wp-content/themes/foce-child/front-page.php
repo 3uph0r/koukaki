@@ -9,6 +9,7 @@ get_header();
                 loop="infinite">
                 <source src="<?php echo get_theme_file_uri() . '/assets/video/hero-video.mp4'; ?>" type="video/mp4">
             </video>
+
         <div class="container__logo">
             <img class="banner__logo" src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="Logo fleurs d'oranger & chats errants">
         </div>
