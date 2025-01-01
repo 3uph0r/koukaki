@@ -4,6 +4,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+
     <section class="banner">
         <div class="container-video">
             <video class="banner_video" width="1440" autoplay="autoplay" muted=""
@@ -11,7 +12,6 @@ get_header();
                 <source src="<?php echo get_theme_file_uri() . '/assets/video/hero-video.mp4'; ?>" type="video/mp4">
             </video>
         </div>
-
         <div class="container-logo">
             <img class="banner-logo" src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="Logo fleurs d'oranger & chats errants">
         </div>
@@ -23,16 +23,7 @@ get_header();
         <article id="" class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>
         </article>
-        <?php
-        $args = array(
-            'post_type' => 'characters',
-            'posts_per_page' => -1,
-            'meta_key'  => '_main_char_field',
-            'orderby'   => 'meta_value_num',
-
-        );
-        $characters_query = new WP_Query($args);
-        ?>
+        
         <article id="characters">
             <div class="main-character">
                 <h3><span id="characterTitle" class="displayTitle">Les personnages</span></h3>
@@ -58,9 +49,6 @@ get_header();
                 </div>
             </div>
         </article>
-
-
-
 
         <article id="place">
             <div>

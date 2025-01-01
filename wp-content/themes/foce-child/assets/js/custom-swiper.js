@@ -18,15 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
           slideShadows: true
       },
       spaceBetween: 40,  // Espace entre les slides
-      pagination: false, // Pas de pagination
-      navigation: false, // Pas de navigation
-      
+      pagination: false,
+      navigation: false,
   });
 
-  // Déclencher l'autoplay au premier scroll
-  window.addEventListener('scroll', function() {
-      // Lorsque l'utilisateur effectue un scroll, démarre l'autoplay
-      swiper.autoplay.start();
-      window.removeEventListener('scroll', arguments.callee);
-  });
+  // L'autoplay démarrera dès le chargement de la page
+  swiper.autoplay.start();
 });
