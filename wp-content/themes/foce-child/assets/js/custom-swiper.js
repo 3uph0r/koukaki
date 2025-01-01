@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
-      loop: false,  // Pas de boucle infinie
+      loop: false,
       autoplay: {
           delay: 2000,
           disableOnInteraction: false,
