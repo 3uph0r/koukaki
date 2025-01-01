@@ -8,7 +8,7 @@
     align-items: center;
     h3 {
         background-image: url("../images/orange_characters_bg.png");
-        display: inline-block;
+        display: block;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -19,7 +19,7 @@
         font-size: 42px;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.345);
         color: white;
-        border-radius: 10px;
+        border-radius: 50%;
     }
     & img {
         margin-bottom: 6em;

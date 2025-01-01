@@ -2,38 +2,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".displayTitle");
   const bigCloud = document.querySelector(".big-cloud");
   const littleCloud = document.querySelector(".little-cloud");
-  const logo= document.querySelector(".banner__logo");
+  const logo = document.querySelector(".banner-logo");
+  let lastScroll = 0;
+  let ticking = false; // Ajout d'une variable pour gérer les appels d'animation.
 
   const onScroll = () => {
-    // Déplacement des titres au scroll
-    titles.forEach((title) => {
-      const rect = title.getBoundingClientRect();
-      const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScroll = window.scrollY;
+        if (lastScroll !== currentScroll) {
+          lastScroll = currentScroll;
 
-      if (isVisible) {
-        title.classList.add("is-visible");
-      } else {
-        title.classList.remove("is-visible"); // Retire la classe si le titre n'est plus visible
-      }
-    });
+          // Animation des titres
+          titles.forEach((title) => {
+            const rect = title.getBoundingClientRect();
+            const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+            if (isVisible) {
+              title.classList.add("is-visible");
+            } else {
+              title.classList.remove("is-visible");
+            }
+          });
 
-    // Déplacement des nuages
-    const scrollY = window.scrollY;
-    const maxScroll = 300;
-    const initialOffset = 50;
-    const bigCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
-    const littleCloudMove = -Math.min(scrollY * 0.1, maxScroll) + initialOffset;
+          // Déplacement des nuages
+          const maxScroll = 300;
+          const initialOffset = 50;
+          const cloudMove = -Math.min(currentScroll * 0.1, maxScroll) + initialOffset;
+          bigCloud.style.transform = `translateX(${cloudMove}px)`;
+          littleCloud.style.transform = `translateX(${cloudMove}px)`;
 
-    bigCloud.style.transform = `translateX(${bigCloudMove}px)`;
-    littleCloud.style.transform = `translateX(${littleCloudMove}px)`;
-
-    // Ajustement pour l'effet de parallaxe du logo
-    if (logo) {
-      logo.style.transform = 'translateY(' + scrollY * 0.3 + 'px)';
+          // Effet de parallaxe du logo
+          logo.style.transform = `translateY(${currentScroll * 0.5}px)`; // Utilise currentScroll pour le calcul
+        }
+        ticking = false;
+      });
+      ticking = true; // Empêche d'appeler requestAnimationFrame trop souvent
     }
   };
-  
 
   window.addEventListener("scroll", onScroll);
-  onScroll(); // Vérifie une première fois au chargement.
+  onScroll(); // Initialise l'état au chargement.
 });

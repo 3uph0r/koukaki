@@ -5,18 +5,9 @@
     &::after {
         content: '';
     }
-    & ul::after {
-        content: '';
-        background-image: url('../images/Hibiscus\ footer.png');
-        width: 600px;
-        height: 600px;
-        animation: rotateLeft 25s linear infinite;
-        margin-left: 2em;
-        background-size: contain;
-        
-    }
 }
 
+// Animation pour monter le footer au chargement
 footer {
     animation: upToLoad 1s ease-out forwards;
 }

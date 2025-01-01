@@ -1,3 +1,4 @@
+// Visibilité des titres h2 et h3
 .displayTitle {
   display: inline-block;
   opacity: 0;
@@ -9,3 +10,13 @@
     transform: translateY(0);
   }
 }
+
+// Titre h3 "Les personnages"
+h3 #characterTitle {
+  margin-left: -20em;
+}
+  .story #characters h3 {
+    background-position: 7.5em;
+    background-size: 25%;
+    margin-bottom: 1em;
+  }

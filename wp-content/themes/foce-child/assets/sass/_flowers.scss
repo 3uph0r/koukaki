@@ -28,7 +28,6 @@
     }
 }
 
-// Animation fleurs
 #studio {
 	h2 {
         &::before {
@@ -74,3 +73,14 @@
         animation: rotateRight 10s linear infinite;
     }
 } 
+
+#colophon ul::after {
+    content: '';
+    background-image: url('../images/Hibiscus\ footer.png');
+    width: 600px;
+    height: 600px;
+    animation: rotateLeft 25s linear infinite;
+    margin-left: 2em;
+    background-size: contain;
+    
+}
