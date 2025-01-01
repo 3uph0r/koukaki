@@ -23,7 +23,7 @@ get_header();
         <article id="" class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>
         </article>
-        
+
         <article id="characters">
             <div class="main-character">
                 <h3><span id="characterTitle" class="displayTitle">Les personnages</span></h3>

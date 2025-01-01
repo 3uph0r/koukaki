@@ -27,9 +27,9 @@ function foce_child_enqueue_assets()
     // Charge le script SwiperJS
     wp_enqueue_script(
         'swiper-js',
-        'https://unpkg.com/swiper/swiper-bundle.min.js', 
-        array(), 
-        '1.0', 
+        'https://unpkg.com/swiper/swiper-bundle.min.js',
+        array(),
+        '1.0',
         true
     );
 

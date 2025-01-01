@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Déplacement des nuages
         const maxScroll = 300;
         const initialOffset = 50;
-        const cloudMove = -Math.min(currentScroll * 0.1, maxScroll) + initialOffset;
+        const cloudMove =
+          -Math.min(currentScroll * 0.1, maxScroll) + initialOffset;
         bigCloud.style.transform = `translateX(${cloudMove}px)`;
         littleCloud.style.transform = `translateX(${cloudMove}px)`;
 
