@@ -5,6 +5,7 @@
     height: 100%;
     max-width: 1440px;
     animation: downToLoad 1s ease-out forwards, fadeIn 1s ease-out forwards;
+    overflow: hidden;
 
     // Animation de flottement pour le logo
     & .container-logo {
@@ -16,12 +17,14 @@
         justify-content: center;
         align-items: center;
         animation: float 3s ease-in-out infinite;
-        clip-path: inset(0);
+        
         
         // Animation de montée pour le logo
         .banner-logo {
             position: absolute;
             animation: upToLoad 1s ease-out;
+            max-width: 100%;
+            max-height: 100%;
         }
     }
 }
