@@ -6,7 +6,7 @@
     margin-bottom: -10em;
     left: 6em;
     align-items: center;
-    h3 {
+    & h3 {
         background-image: url("../images/orange_characters_bg.png");
         display: block;
         background-size: contain;
@@ -17,8 +17,8 @@
         padding-top: 5em;
         padding-bottom: 5em;
         font-size: 42px;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.345);
-        color: white;
+        text-shadow: 0px 4px 4px #00000040;
+        color: #FFF5E9;
         border-radius: 50%;
     }
     & img {

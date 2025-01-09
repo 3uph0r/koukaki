@@ -1,0 +1,227 @@
+/* Style du header */
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #FFD5A2;
+    z-index: 2;
+}
+
+/* Bouton du menu burger à droite */
+.menu-toggle {
+    position: absolute;
+    top: 20%;
+    right: 100px;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    width: 45px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    z-index: 1000;
+    display: block;
+    margin: 5px 10px;
+    transition: all 0.3s ease;
+
+/* Icone burger, les 3 barres */
+    & .burger-icon {
+        width: 30px;
+        height: 4px;
+        margin: 6px 0;
+        background-color: #000;
+        transition: 0.3s ease-in-out;
+    }
+/* Positionnement des 3 barres dans le bouton burger */
+        :nth-child(1) {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        :nth-child(2) {
+            position: absolute;
+            top: 12px;
+            left: 0px;
+            width: 100%;
+            transition: opacity 0.3s ease;
+    }
+            :nth-child(3) {
+                position: absolute;
+                top: 24px;
+                left: 0px;
+                width: 100%;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+}   
+
+/* Animation de la croix "×" quand le menu est ouvert */
+.open.menu-toggle .burger-icon:nth-child(1) {
+    transform: rotate(45deg); /* Rotation de la première barre */
+    top: 12px; /* Ajuste la position de la première barre */
+    animation: rotateLeft 5s linear infinite;
+}
+
+.open.menu-toggle .burger-icon:nth-child(2) {
+    opacity: 0; /* Masque la deuxième barre */
+}
+
+.open.menu-toggle .burger-icon:nth-child(3) {
+    transform: rotate(-45deg); /* Rotation de la troisième barre */
+    top: 12px; /* Ajuste la position de la troisième barre */
+    animation: rotateRight 5s linear infinite;
+}
+
+// Titre h1
+.header-title {
+    text-align: center;
+    width: 100%;
+    size: 21.48px;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+/* Menu du header, visible lorsque la classe open est ajoutée */
+.header-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    left: 50%;
+    width: 100%;
+    max-width: 1440px;
+    height: calc(100vh - 80px);
+    transform: translateX(-50%);
+    background-color: #FFF5E9;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: 999;
+    animation: fadeIn 3s ease-out;
+
+    & .menu {
+        list-style: none;
+        padding: 0;
+        a {
+            font-size: 64px;
+            text-decoration: none;
+            &:hover {
+                text-shadow: 0px 0px 14px #FF5C00;
+            }
+        }
+    }
+    // Liens du menu
+    & .menu-link { 
+        margin: 20px 0;
+        text-align: center;
+        opacity: 0;
+    }
+    /* Quand la classe 'open' est ajoutée, le menu est visible */
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        transition: opacity 0.5s ease, visibility 0.3s ease;
+    }
+
+    /* Quand la classe 'open' est retirée, on cache le menu avec une transition */
+    &:not(.open) {
+        visibility: hidden;
+        opacity: 0; /* Le menu devient invisible avec l'animation */
+        transition: opacity 0.5s ease, visibility 0.3s ease; /* On ajoute un délai de 0.5s pour la visibilité */
+    }
+
+    /* Centre le logo dans le menu */
+    &_open-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 90px;
+        /* Taille du logo */
+        img {
+            width: 154px;
+            height: auto;
+        }
+    }
+}
+
+.header-nav_footer-link a {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    text-decoration: none;
+        &:hover {
+            color: inherit;
+    }
+}       
+    
+
+// Personnages dans le menu
+.header-nav.open {
+    .header-nav_imagesToAnimate {
+        position: relative;
+        // Kawaneko
+        img:nth-child(6) {
+            position: absolute;
+            bottom: 40em;
+            left: 267px;
+            height: auto;
+            width: 109px;
+            z-index: 10;
+            animation: floatEffect 6s ease-in-out infinite;
+        }
+        // Jaakuna
+        img:nth-child(7) {
+            position: absolute;
+            bottom: 18em;
+            left: 1076px;
+            height: auto;
+            width: 155px;
+            z-index: 10;
+            animation: floatEffect 5s ease-in-out infinite;
+        }
+        // Jaakuna
+        img:nth-child(8) {
+            position: absolute;
+            bottom: 5em;
+            left: 79px;
+            height: auto;
+            width: 106px;
+            z-index: 10;
+            animation: floatEffect 7s ease-in-out infinite;
+        }
+    }
+}
+
+/* Applique l'animation aux liens du menu */
+.header-nav.open .menu-link {
+    animation: slideUp 0.5s ease-out forwards;
+    /* Un petit délai pour chaque lien */
+    animation-delay: calc(0.2s * var(--i)); /* Le délai augmente avec chaque élément */
+  }
+  
+  /* Chaque élément du menu avec un index différent pour appliquer un délai */
+  .menu-link:nth-child(1) {
+    --i: 1;
+  }
+  .menu-link:nth-child(2) {
+    --i: 2;
+  }
+  .menu-link:nth-child(3) {
+    --i: 3;
+  }
+  .menu-link:nth-child(4) {
+    --i: 4;
+  }

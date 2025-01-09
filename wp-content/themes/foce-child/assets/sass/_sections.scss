@@ -6,4 +6,9 @@ section {
     & p {
         animation: noMove 1s ease-out forwards;
     }
+    &#studio {
+        div::before {
+            top: 15em;
+        }
+    }
 }

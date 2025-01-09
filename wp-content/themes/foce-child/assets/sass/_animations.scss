@@ -28,7 +28,7 @@
     }
 }
 
-// Evite que le texte défile au chargement
+// Fixe le texte au chargement de la page
 @keyframes noMove {
     from {
         transform: translateY(-300px);
@@ -38,7 +38,7 @@
     }
 }
 
-// Effet de rotation droite pour la fleur
+// Effet de rotation droite
 @keyframes rotateRight {
     from {
         transform: rotate(0deg);
@@ -48,7 +48,7 @@
     }
 }
 
-// Effet de rotation gauche pour la fleur
+// Effet de rotation gauche
 @keyframes rotateLeft {
     from {
         transform: rotate(0deg);
@@ -71,5 +71,26 @@
     }
     75% {
         transform: translate(-11px, 8px);
+    }
+}
+
+/* Animation de flottement des personnages du menu */
+@keyframes floatEffect {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animation de bas en haut pour l'apparition des liens */
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

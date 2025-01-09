@@ -39,3 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll);
   onScroll(); // Initialise l'état au chargement.
 });
+
+
+
+
+
+

@@ -76,11 +76,68 @@
 
 #colophon ul::after {
     content: '';
-    background-image: url('../images/Hibiscus\ footer.png');
+    background-image: url('../images/Hibiscus.png');
     width: 600px;
     height: 600px;
     animation: rotateLeft 25s linear infinite;
     margin-left: 2em;
     background-size: contain;
     
+}
+
+// Fleurs du menu ouvert
+.header-nav.open {
+    .header-nav_imagesToAnimate {
+        position: relative;
+        // Fleur Orchidée
+        img:nth-child(1) {
+            position: absolute;
+            bottom: 45em;
+            left: -59px;
+            height: auto;
+            width: 173px;
+            z-index: 10;
+            animation: rotateLeft 40s linear infinite;
+        }
+        // Fleur Hibiscus
+        img:nth-child(2) {
+            position: absolute;
+            bottom: -25em;
+            left: 1122px;
+            width: 626px;
+            height: auto;
+            z-index: 10;
+            animation: rotateLeft 35s linear infinite;
+        }
+        // Fleur Flower
+        img:nth-child(3) {
+            position: absolute;
+            bottom: 23em;
+            left: 213px;
+            width: 70px;
+            height: auto;
+            z-index: 10; 
+            animation: rotateRight 28s linear infinite;  
+        }
+        // Fleur Random_Flower
+        img:nth-child(4) {
+            position: absolute;
+            bottom: 33em;
+            left: 1396px;
+            width: 76px;
+            height: auto;
+            z-index: 10; 
+            animation: rotateRight 40s linear infinite; 
+        }
+        // Fleur Tournesol
+        img:nth-child(5) {
+            position: absolute;
+            bottom: 38em; /* Ajuste la position verticale selon tes besoins */
+            left: 1039px; /* Ajuste la position horizontale selon tes besoins */
+            width: 216px; /* Ajuste la taille de l'image si nécessaire */
+            height: auto; /* Garde les proportions de l'image */
+            z-index: 10; 
+            animation: rotateLeft 30s linear infinite;
+        }
+    }
 }
