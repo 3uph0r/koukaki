@@ -22,7 +22,7 @@
         width: 200px; 
         height: 200px;
         left: 25px;
-        animation: rotateLeft 5s linear infinite;
+        animation: rotateLeft 10s linear infinite;
         transform-origin: center;
         }
     }
@@ -35,7 +35,7 @@
             overflow: hidden;
 			width: 200px;
 			height: 200px;
-			animation: rotateRight 3s linear infinite;
+			animation: rotateRight 13s linear infinite;
 			transform-origin: center;
 		}
 		&::after {
@@ -58,7 +58,7 @@
         bottom: 8.5em;
         width: 250px;
         height: 250px;
-        animation: rotateLeft 2s linear infinite;
+        animation: rotateLeft 12s linear infinite;
 }
     h3::after {
         content: '';

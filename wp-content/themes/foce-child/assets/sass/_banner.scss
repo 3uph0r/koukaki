@@ -30,6 +30,7 @@
     // Disparition de la vidéo en dessous de 768px
     & .container-video {
         display: block;
+        object-fit: cover;
         
             @media (max-width: 767px) {
                 display: none;

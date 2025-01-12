@@ -52,7 +52,7 @@
                 </ul>
 
                 <!-- Footer link -->
-                <p class="header-nav_footer-link"><a href="#">STUDIO KOUKAKI</a></p>
+                <p class="header-nav_footer-link"><a href="<?php echo esc_url(home_url('/')); ?>">STUDIO KOUKAKI</a></p>
 
                 <!-- Image animée -->
                 <div class="header-nav_imagesToAnimate">

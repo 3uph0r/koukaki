@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modifier: 1,
       slideShadows: true,
     },
-    spaceBetween: 40, // Espace entre les slides
+    spaceBetween: 20, // Espace entre les slides
     pagination: false,
     navigation: false,
   });
