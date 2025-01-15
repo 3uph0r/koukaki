@@ -11,15 +11,19 @@
   }
 }
 
-.main-character h3 {
-  margin-left: -4em;
-  margin-top: 30px;
+#characters {
+  background-position: left;
+  & .main-character h3 {
+    margin-left: -4em;
+    margin-top: 10px;
+  }
 }
 // Titre h3 "Les personnages"
 h3 #characterTitle {
+  padding: 10px;
   margin-left: -15em;
 }
   .story #characters h3 {
     background-position: 6em;
-    background-size: 30%;
+    background-size: contain;
   }

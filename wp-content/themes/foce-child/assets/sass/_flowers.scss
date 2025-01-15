@@ -5,59 +5,59 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 182px;
+    height: 182px;
     animation: rotateRight 15s linear infinite;
     transform-origin: center;
 }
 
-.story {
-    h2 {
-        &::after {
+.story h2 {
+    &::after {
         content: '';
         background-image: url('../images/Sunflower.png');
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        width: 200px; 
-        height: 200px;
-        left: 25px;
+        width: 154px; 
+        height: 154px;
+        left: 0.7em;
         animation: rotateLeft 10s linear infinite;
         transform-origin: center;
-        }
     }
 }
+
 
 #studio {
 	h2 {
         &::before {
 			background-image: url('../images/Random_Flower.png');
             overflow: hidden;
-			width: 200px;
-			height: 200px;
+			width: 202px;
+			height: 199px;
 			animation: rotateRight 13s linear infinite;
 			transform-origin: center;
 		}
 		&::after {
 			background-image: url('../images/Flower.png');
-			width: 100px;
-			height: 100px;
+			width: 108px;
+			height: 108px;
 			animation: rotateLeft 20s linear infinite;
 			transform-origin: center;
 		}	
 	}
 }
 #nomination {
+    overflow: hidden;
     h3::before {
         content: '';
         background-image: url("../images/Sunflower.png");
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        left: -1em;
+        left: 0.5em;
         bottom: 8.5em;
-        width: 250px;
-        height: 250px;
+        width: 216px;
+        height: 216px;
         animation: rotateLeft 12s linear infinite;
 }
     h3::after {
@@ -66,10 +66,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        right: 0.1em;
+        right: -2em;
         bottom: 10em;
-        width: 200px;
-        height: 200px;
+        width: 172px;
+        height: 168px;
         animation: rotateRight 10s linear infinite;
     }
 } 
@@ -77,8 +77,8 @@
 #colophon ul::after {
     content: '';
     background-image: url('../images/Hibiscus.png');
-    width: 600px;
-    height: 600px;
+    width: 626px;
+    height: 626px;
     animation: rotateLeft 25s linear infinite;
     margin-left: 2em;
     background-size: contain;
@@ -129,13 +129,13 @@
             z-index: 10; 
             animation: rotateRight 40s linear infinite; 
         }
-        // Fleur Tournesol
+        // Fleur Sunflower
         img:nth-child(5) {
             position: absolute;
-            bottom: 38em; /* Ajuste la position verticale selon tes besoins */
-            left: 1039px; /* Ajuste la position horizontale selon tes besoins */
-            width: 216px; /* Ajuste la taille de l'image si nécessaire */
-            height: auto; /* Garde les proportions de l'image */
+            bottom: 38em;
+            left: 1039px;
+            width: 216px;
+            height: auto;
             z-index: 10; 
             animation: rotateLeft 30s linear infinite;
         }

@@ -63,7 +63,7 @@ header {
 .open.menu-toggle .burger-icon:nth-child(1) {
     transform: rotate(45deg); /* Rotation de la première barre */
     top: 12px; /* Ajuste la position de la première barre */
-    animation: rotateLeft 5s linear infinite;
+    animation: rotateLeft 5s linear infinite; /* Effet de rotation vers la gauche */
 }
 
 .open.menu-toggle .burger-icon:nth-child(2) {
@@ -73,7 +73,7 @@ header {
 .open.menu-toggle .burger-icon:nth-child(3) {
     transform: rotate(-45deg); /* Rotation de la troisième barre */
     top: 12px; /* Ajuste la position de la troisième barre */
-    animation: rotateRight 5s linear infinite;
+    animation: rotateRight 5s linear infinite; /* Effet de rotation vers la droite */
 }
 
 // Titre h1
@@ -160,7 +160,7 @@ header {
 .header-nav_footer-link a {
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 8em;
     text-decoration: none;
         &:hover {
             color: inherit;
@@ -192,7 +192,7 @@ header {
             z-index: 10;
             animation: floatEffect 5s ease-in-out infinite;
         }
-        // Jaakuna
+        // Orenjiiro
         img:nth-child(8) {
             position: absolute;
             bottom: 5em;
