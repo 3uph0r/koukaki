@@ -8,13 +8,13 @@
     h3 {
         font-size: 32px;
     }
-// ***** Menu Burger *****
+    // ***** Menu Burger *****
 
     .menu-toggle {
         right: 4em;
     }
 
-// ***** Menu ouvert *****
+    // ***** Menu ouvert *****
 
     .header-nav.open {
         & .menu a {
@@ -75,7 +75,7 @@
         }
     }
 
-// ***** Section Story *****
+    // ***** Section Story *****
 
     .story {
         margin-top: 5em;
@@ -113,13 +113,13 @@
         }
     }
 
-// *****Section Studio *****
+    // *****Section Studio *****
 
     #studio {
     margin-top: 10em;
-}
+    }
 
-// ***** Section Nomination *****
+    // ***** Section Nomination *****
 
     #nomination {
         display: flex;
@@ -306,13 +306,13 @@
         font-size: 15px;
     }
 
-// ***** Menu Burger *****
+    // ***** Menu Burger *****
 
     .menu-toggle {
         right: 1em;
     }
 
-// ***** Menu ouvert *****
+    // ***** Menu ouvert *****
 
     .header-nav.open {
         & .menu a {
@@ -367,7 +367,7 @@
         }
     }
 
-// ***** Section Banner *****
+    // ***** Section Banner *****
 
     .banner {
         & .container-video { 
@@ -484,6 +484,5 @@
             font-size: 0.8rem;
         }
     }
-
 }
 
