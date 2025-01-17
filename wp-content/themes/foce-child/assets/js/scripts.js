@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         littleCloud.style.transform = `translateX(${cloudMove}px)`;
 
         // Effet de parallaxe du logo
-        logo.style.transform = `translateY(${currentScroll * 0.5}px)`; // Utilise currentScroll pour le calcul
+        logo.style.transform = `translateY(${currentScroll * -0.5}px)`; // Utilise currentScroll pour le calcul
       }
     });
   };

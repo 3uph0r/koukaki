@@ -18,17 +18,15 @@
         justify-content: center;
         align-items: center;
         animation: float 3s ease-in-out infinite;
-        
-        // Animation de montée pour le logo
-        .banner-logo {
-            display: flex;
-            position: absolute;
-            animation: upToLoad 1s ease-out;
-            // max-width: 100%;
-            // max-height: 100%;
-        }
+    }  
+    // Animation de montée pour le logo
+    & .banner-logo {
+        display: flex;
+        position: absolute;
+        animation: upToLoad 1s ease-out;
+        width: 680px;
+        height: 479px;
     }
-    
     & .container-video {
         display: block;
         object-fit: cover;
