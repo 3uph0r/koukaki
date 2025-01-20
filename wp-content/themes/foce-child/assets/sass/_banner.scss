@@ -6,29 +6,25 @@
     height: 100%;
     max-width: 1440px;
     animation: downToLoad 1s ease-out forwards, fadeIn 1s ease-out forwards;
-    overflow: hidden;
 
     // Animation de flottement pour le logo
-    & .container-logo {
+    & .container__logo {
         position: absolute;
         background-size: cover;
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         animation: float 3s ease-in-out infinite;
     }  
-    // Animation de montée pour le logo
-    & .banner-logo {
-        display: flex;
-        position: absolute;
+    // Animation de montée pour le logo avec effet parallaxe
+    & .banner__logo {
+        top: 80px;
+        position: sticky;
+        z-index: 1000;
         animation: upToLoad 1s ease-out;
         width: 680px;
         height: 479px;
-    }
-    & .container-video {
-        display: block;
-        object-fit: cover;
     }
 }

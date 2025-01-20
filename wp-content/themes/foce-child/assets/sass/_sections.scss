@@ -6,9 +6,19 @@ section {
     & p {
         animation: noMove 1s ease-out forwards; 
     }
-    &#studio {
-        div::before {
-            top: 15em;
+    &#story {
+        padding-top: 5em;
+        & #characters {
+            padding-top: 5em;
         }
+        & #place {
+            padding-top: 5em;
+        }
+    }
+    &#studio {
+        padding-top: 5em;
+    }
+    &#nomination {
+        margin-top: 5em;
     }
 }

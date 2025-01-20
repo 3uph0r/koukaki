@@ -28,7 +28,10 @@
 
 
 #studio {
-	h2 {
+    & div::before { /* Brindille entre les paragraphes */
+        top: 20em;
+    }
+	& h2 {
         &::before {
 			background-image: url('../images/Random_Flower.png');
             overflow: hidden;
@@ -47,27 +50,26 @@
 	}
 }
 #nomination {
-    overflow: hidden;
-    h3::before {
+    &::before {
         content: '';
         background-image: url("../images/Sunflower.png");
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        left: 0.5em;
-        bottom: 8.5em;
+        left: 8em;
+        bottom: 23em;
         width: 216px;
         height: 216px;
         animation: rotateLeft 12s linear infinite;
 }
-    h3::after {
+    &::after {
         content: '';
         background-image: url('../images/Orchid.png');
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        right: -2em;
-        bottom: 10em;
+        right: -4em;
+        bottom: 26em;
         width: 172px;
         height: 168px;
         animation: rotateRight 10s linear infinite;
@@ -92,7 +94,7 @@
         // Fleur Orchidée
         img:nth-child(1) {
             position: absolute;
-            bottom: 45em;
+            bottom: 35em;
             left: -59px;
             height: auto;
             width: 173px;
@@ -112,7 +114,7 @@
         // Fleur Flower
         img:nth-child(3) {
             position: absolute;
-            bottom: 23em;
+            bottom: 20em;
             left: 213px;
             width: 70px;
             height: auto;
@@ -122,7 +124,7 @@
         // Fleur Random_Flower
         img:nth-child(4) {
             position: absolute;
-            bottom: 33em;
+            bottom: 25em;
             left: 1396px;
             width: 76px;
             height: auto;
@@ -132,7 +134,7 @@
         // Fleur Sunflower
         img:nth-child(5) {
             position: absolute;
-            bottom: 38em;
+            bottom: 30em;
             left: 1039px;
             width: 216px;
             height: auto;

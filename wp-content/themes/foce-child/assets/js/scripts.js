@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".displayTitle");
   const bigCloud = document.querySelector(".big-cloud");
   const littleCloud = document.querySelector(".little-cloud");
-  const logo = document.querySelector(".banner-logo");
   let lastScroll = 0;
 
   const onScroll = () => {
@@ -29,9 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
           -Math.min(currentScroll * 0.1, maxScroll) + initialOffset;
         bigCloud.style.transform = `translateX(${cloudMove}px)`;
         littleCloud.style.transform = `translateX(${cloudMove}px)`;
-
-        // Effet de parallaxe du logo
-        logo.style.transform = `translateY(${currentScroll * -0.5}px)`; // Utilise currentScroll pour le calcul
       }
     });
   };
